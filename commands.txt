@@ -1,0 +1,62 @@
+1
+mkdir death_star
+touch darth_vader.txt princess_leia.txt storm_trooper.txt
+2
+mkdir tatooine
+cd tatooine/
+touch luke.txt ben_kenobi.txt
+3
+mkdir millenium_falcon && touch ./millenium_falcon/han_solo.txt
+touch ./millenium_falcon/chewbaca.txt
+4
+mv ben_kenobi.txt  obi_wan.txt
+5
+cp ../death_star/storm_trooper.txt .
+6
+mv luke.txt obi_wan.txt ./millenium_falcon/
+7
+mv millenium_falcon ..
+8
+cd tatooine/
+mv millenium_falcon ./death_star/
+9
+cd death_star/
+mv princess_leia.txt ./millenium_falcon/
+10
+rm ./millenium_falcon/obi_wan.txt
+11
+cd .. && mkdir yavin_4
+12
+mv ./death_star/millenium_falcon ./yavin_4
+13
+mkdir ./yavin_4/x_wing
+14
+cd yavin_4/
+mv ./millenium_falcon/princess_leia.txt .
+mv luke.txt ../x_wing/
+15
+mv millenium_falcon x_wing ..
+16
+cd ..
+mkdir ./death_star/tie_fighter_1
+mkdir ./death_star/tie_fighter_2
+mkdir ./death_star/tie_fighter_3
+17
+mv darth_vader.txt ./tie_fighter_1
+18
+cp storm_trooper.txt ./tie_fighter_2
+cp storm_trooper.txt ./tie_fighter_3
+19
+mv ./tie_fighter_1 ..
+mv ./tie_fighter_2 ..
+mv ./tie_fighter_3 ..
+20
+cd ..
+rm -r tie_fighter_2
+rm -r tie_fighter_3
+21
+cd x_wing/ && touch the_force.txt
+22
+rm -r death_star/
+23
+$ mv ./millenium_falcon/ x_wing/ ./yavin_4/
